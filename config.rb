@@ -1,9 +1,12 @@
+# run `$ compass compile -e production --force` to force compile for production
+
 http_path = "/"
-css_dir = "_assets/css"
-sass_dir = "_assets/_scss"
-images_dir = "_assets/images"
-javascripts_dir = "_assets/js"
-# line_comments = false
-# output_style = :compact
-# output_style = :compressed
+preferred_syntax = :scss
+css_dir = "assets/css"
+sass_dir = "assets/_sass"
+images_dir = "assets/images"
+javascripts_dir = "assets/js"
+# relative_assets = true
 # sass_options = { :debug_info => true }
+output_style = ( environment == :production ) ? :compressed : :expanded
+line_comments = ( environment == :production ) ? false : true
